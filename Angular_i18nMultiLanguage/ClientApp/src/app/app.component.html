@@ -322,5 +322,9 @@
   <h1 i18n>Hi, How are you?</h1>
 </div>
 
+<ng-container *ngFor="let language of languageList">
+  <a href="/{{language.code}}/"><button class="button">{{language.label}}</button></a>
+</ng-container>
+
 
 <router-outlet></router-outlet>

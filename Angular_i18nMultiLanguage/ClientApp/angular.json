@@ -7,6 +7,10 @@
       "i18n": {
         "sourceLocale": "en-US",
         "locales": {
+          "en": {
+            "translation": "src/locale/messages.xlf",
+            "baseHref": "/en"
+          },
           "fr": {
             "translation": "src/locale/messages.fr.xlf",
             "baseHref": "/fr"
@@ -84,9 +88,14 @@
               "sourceMap": true,
               "namedChunks": true
             },
+            "en": {
+              "localize": [ "en" ],
+              "outputPath": "dist/ClientApp/",
+              "i18nMissingTranslation": "error"
+            },
             "fr": {
               "localize": [ "fr" ],
-              "outputPath": "dist/fr",
+              "outputPath": "dist/ClientApp/",
               "i18nMissingTranslation": "error"
             }
           },
@@ -100,6 +109,9 @@
             },
             "development": {
               "browserTarget": "ClientApp:build:development"
+            },
+            "en": {
+              "browserTarget": "ClientApp:build:en"
             },
             "fr": {
               "browserTarget": "ClientApp:build:fr"
